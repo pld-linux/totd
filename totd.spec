@@ -4,8 +4,7 @@ Version:	1.4
 Release:	1
 License:	BSD
 URL:		http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
-Group:		System Environment/Daemons
-######		Unknown group!
+Group:		Networking/Daemons
 Source0:	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/%{name}-%{version}.tar.gz
 # Source0-md5:	f732aaad9b9507cd9985224fc40f5bab
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -65,6 +64,7 @@ if [ $1 = 0 ]; then
 fi
 
 %files
+%defattr(644,root,root,755)
 %doc README
 %defattr(644,root,root,755)
 %config(noreplace) %{_sysconfdir}/totd.conf
