@@ -32,8 +32,8 @@ sieci tylko IPv6 komunikuj±cy siê ze ¶wiatem IPv4 przy u¿yciu jakiego¶
 mechanizmu t³umaczenia. Przyk³adami takich mechanizmów t³umaczenia
 aktualnie bêd±cych w u¿yciu s±:
 - t³umaczenie adresów sieciowych i pakietów IPv6/IPv4 (NAT-PT -
-  Network Address and Packet Translation), zaimplementowane m.in. przez
-  Cisco
+  Network Address and Packet Translation), zaimplementowane m.in.
+  przez Cisco
 - t³umaczenie na poziomie aplikacji, jak np. faithd zaimplementowany
   przez KAME (http://www.kame.net/) albo pTRTd
   (http://v6web.litech.org/ptrtd/)
