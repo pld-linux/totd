@@ -11,6 +11,8 @@ Source1:	%{name}.init
 Source2:	%{name}.conf
 Patch0:		%{name}-Makefile.in.patch
 URL:		http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
+PreReq:		rc-scripts
+Requires(post,preun):	/sbin/chkconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -60,24 +62,24 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/totd.conf
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%postun
-if [ "$1" -ge "1" ]; then
-	/etc/rc.d/init.d/totd condrestart >/dev/null 2>&1
-fi
-
 %post
 /sbin/chkconfig --add totd
 
 %preun
-if [ $1 = 0 ]; then
-	/etc/rc.d/init.d/totd stop >/dev/null 2>&1
+if [ "$1" = "0 "]; then
+	/etc/rc.d/init.d/totd stop >&2
 	/sbin/chkconfig --del totd
+fi
+
+%postun
+if [ "$1" -ge "1" ]; then
+	/etc/rc.d/init.d/totd condrestart >&2
 fi
 
 %files
 %defattr(644,root,root,755)
 %doc README
-%config(noreplace) %{_sysconfdir}/totd.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/totd.conf
 %attr(754,root,root) /etc/rc.d/init.d/*
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/*/*
