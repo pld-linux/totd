@@ -1,0 +1,22 @@
+diff -ur totd-1.4-orig/Makefile.in totd-1.4/Makefile.in
+--- totd-1.4-orig/Makefile.in	2002-02-28 04:59:47.000000000 -0700
++++ totd-1.4/Makefile.in	2004-08-12 11:47:09.462495512 -0600
+@@ -12,6 +12,7 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ 
++DESTDIR    =
+ INSTALLDIR = @sbindir@
+ INSTALLLIB = @libdir@
+ INSTALLMAN = @mandir@
+@@ -58,8 +59,8 @@
+ 	        ${CC} ${LDFLAGS} -o ${PROG} ${OBJS} ${LDADD}
+ 
+ install: $(PROG)
+-	$(INSTALL) -c -s -m 0555 -o bin -g bin $(PROG) $(INSTALLDIR)
+-	$(INSTALL) -c -m 0444 -o root -g wheel $(MAN) $(INSTALLMAN)/man8
++	$(INSTALL) -c $(PROG) $(DESTDIR)$(INSTALLDIR)
++	$(INSTALL) -c $(MAN) $(DESTDIR)$(INSTALLMAN)/man8
+ 
+ lint:
+ 	lint ${SRCS}
