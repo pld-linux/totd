@@ -18,24 +18,23 @@ Totd is a small DNS proxy nameserver that supports IPv6 only
 hosts/networks that communicate with the IPv4 world using some
 translation mechanism. Examples of such translation mechanisms
 currently in use are:
-
-   - IPv6/IPv4 Network Address and Packet Translation (NAT-PT)
-     implemented e.g. by Cisco.
-   - Application level translators as the faithd implemented by the KAME
-     project (http://www.kame.net/) or pTRTd
-     (http://v6web.litech.org/ptrtd/)
+- IPv6/IPv4 Network Address and Packet Translation (NAT-PT)
+  implemented e.g. by Cisco.
+- Application level translators as the faithd implemented by the KAME
+  project (http://www.kame.net/) or pTRTd
+  (http://v6web.litech.org/ptrtd/)
 
 %description -l pl
 Totd to ma³y serwer proxy dla serwera nazw (DNS) obs³uguj±cy hosty i
 sieci tylko IPv6 komunikuj±cy siê ze ¶wiatem IPv4 przy u¿yciu jakiego¶
 mechanizmu t³umaczenia. Przyk³adami takich mechanizmów t³umaczenia
 aktualnie bêd±cych w u¿yciu s±:
- - t³umaczenie adresów sieciowych i pakietów IPv6/IPv4 (NAT-PT -
-   Network Address and Packet Translation), zaimplementowane m.in.
-   przez Cisco
- - t³umaczenie na poziomie aplikacji, jak np. faithd zaimplementowany
-   przez KAME (http://www.kame.net/) albo pTRTd
-   (http://v6web.litech.org/ptrtd/)
+- t³umaczenie adresów sieciowych i pakietów IPv6/IPv4 (NAT-PT -
+  Network Address and Packet Translation), zaimplementowane m.in.
+  przez Cisco
+- t³umaczenie na poziomie aplikacji, jak np. faithd zaimplementowany
+  przez KAME (http://www.kame.net/) albo pTRTd
+  (http://v6web.litech.org/ptrtd/)
 
 %prep
 %setup -q
