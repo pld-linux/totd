@@ -1,15 +1,16 @@
 Summary:	DNS proxy that supports IPv6 <==> IPv4 record translation
 Summary(pl):	Proxy DNS obs³uguj±cy t³umaczenie rekordów IPv6 <==> IPv4
 Name:		totd
-Version:	1.5
+Version:	1.5.1
 Release:	1
 License:	BSD
 Group:		Networking/Daemons
 Source0:	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/%{name}-%{version}.tar.gz
-# Source0-md5:	b7da63fc1ea1b2e2ce959732826bc146
+# Source0-md5:	7edaedae9f6aca5912dd6c123582cf08
 Source1:	%{name}.init
 Source2:	%{name}.conf
 Patch0:		%{name}-Makefile.in.patch
+Patch1:		%{name}-buildfix.patch
 URL:		http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
 PreReq:		rc-scripts
 Requires(post,preun):	/sbin/chkconfig
@@ -41,6 +42,7 @@ aktualnie bêd±cych w u¿yciu s±:
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %configure
