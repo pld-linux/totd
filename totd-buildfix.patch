@@ -1,0 +1,19 @@
+diff -ur totd-1.5.1-o/ne_mesg.c totd-1.5.1/ne_mesg.c
+--- totd-1.5.1-o/ne_mesg.c	2005-07-04 03:09:22.000000000 -0600
++++ totd-1.5.1/ne_mesg.c	2005-07-06 00:22:56.000000000 -0600
+@@ -226,13 +226,13 @@
+ 			*cnt = htons (us);
+ 
+ 			if (T.debug > 4)
+-				syslog (LOG_DEBUG, "%s: now counter = %zd",
++				syslog (LOG_DEBUG, "%s: now counter = %u",
+ 					fn, us);
+ 		}
+ 	}
+ 
+ 	if (T.debug > 4)
+-		syslog (LOG_DEBUG, "%s: return %d", fn, *wp - wp_start);
++		syslog (LOG_DEBUG, "%s: return %d", fn, (int)(*wp - wp_start));
+ 
+ 	return (*wp - wp_start);
+ }
