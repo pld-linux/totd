@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# totd	This shell script starts or stops the TOTD IPv6->IPv4 DNS translator 
+# totd	This shell script starts or stops the TOTD IPv6->IPv4 DNS translator
 #
 # chkconfig:	345 90 25
 #
 # description:	the TOT daemon translates requests for IPv6 names and returns
 #		a pre-designated relay address for them.
-#		
+#
 # pidfile:	/var/run/totd.pid
 # config:	/etc/totd.conf
 
