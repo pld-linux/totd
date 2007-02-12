@@ -1,5 +1,5 @@
 Summary:	DNS proxy that supports IPv6 <==> IPv4 record translation
-Summary(pl):	Proxy DNS obs≥uguj±cy t≥umaczenie rekordÛw IPv6 <==> IPv4
+Summary(pl.UTF-8):   Proxy DNS obs≈ÇugujƒÖcy t≈Çumaczenie rekord√≥w IPv6 <==> IPv4
 Name:		totd
 Version:	1.5.1
 Release:	1
@@ -27,15 +27,15 @@ currently in use are:
   project (http://www.kame.net/) or pTRTd
   (http://v6web.litech.org/ptrtd/)
 
-%description -l pl
-Totd to ma≥y serwer proxy dla serwera nazw (DNS) obs≥uguj±cy hosty i
-sieci tylko IPv6 komunikuj±cy siÍ ze ∂wiatem IPv4 przy uøyciu jakiego∂
-mechanizmu t≥umaczenia. Przyk≥adami takich mechanizmÛw t≥umaczenia
-aktualnie bÍd±cych w uøyciu s±:
-- t≥umaczenie adresÛw sieciowych i pakietÛw IPv6/IPv4 (NAT-PT -
+%description -l pl.UTF-8
+Totd to ma≈Çy serwer proxy dla serwera nazw (DNS) obs≈ÇugujƒÖcy hosty i
+sieci tylko IPv6 komunikujƒÖcy siƒô ze ≈õwiatem IPv4 przy u≈ºyciu jakiego≈õ
+mechanizmu t≈Çumaczenia. Przyk≈Çadami takich mechanizm√≥w t≈Çumaczenia
+aktualnie bƒôdƒÖcych w u≈ºyciu sƒÖ:
+- t≈Çumaczenie adres√≥w sieciowych i pakiet√≥w IPv6/IPv4 (NAT-PT -
   Network Address and Packet Translation), zaimplementowane m.in.
   przez Cisco
-- t≥umaczenie na poziomie aplikacji, jak np. faithd zaimplementowany
+- t≈Çumaczenie na poziomie aplikacji, jak np. faithd zaimplementowany
   przez KAME (http://www.kame.net/) albo pTRTd
   (http://v6web.litech.org/ptrtd/)
 
