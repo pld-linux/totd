@@ -1,5 +1,5 @@
 Summary:	DNS proxy that supports IPv6 <==> IPv4 record translation
-Summary(pl.UTF-8):   Proxy DNS obsługujący tłumaczenie rekordów IPv6 <==> IPv4
+Summary(pl.UTF-8):	Proxy DNS obsługujący tłumaczenie rekordów IPv6 <==> IPv4
 Name:		totd
 Version:	1.5.1
 Release:	1
